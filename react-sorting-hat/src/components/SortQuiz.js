@@ -1,4 +1,4 @@
-import React, { setState, Component } from 'react'
+import React, { Component } from 'react'
 
 class SortQuiz extends Component {
     constructor() {
@@ -9,73 +9,72 @@ class SortQuiz extends Component {
             hufflepuff: 0,
             slytherin: 0
         }
+
+        this.handleChange = (e) => {
+            e.preventDefault()
+            console.log(e.target.name)
+                this.setState({
+                    [e.target.name]: parseInt(e.target.value, 10) + 1
+                })
+            console.log(this.state)
+        }
+
+
     }
 
-    
+
     render() {
         return (
             <form>
-                <label for="q-one">
-                    Which of these words best describes you?
-                    <select>
-                        <option>Ambitious</option>
-                        <option>Kind</option>
-                        <option>Brave</option>
-                        <option>Curious</option>
-                    </select>
+                <label>
+                Which of these words best describes you? <br />
+                        <input value={this.state.slytherin} onClick={this.handleChange} name="slytherin" type="checkbox" />Ambitious<br />
+                        <input value={this.state.hufflepuff} onClick={this.handleChange} name="hufflepuff" type="checkbox" />Kind<br />
+                        <input value={this.state.gryffindor} onClick={this.handleChange} name="gryffindor" type="checkbox" />Brave<br />
+                        <input value={this.state.ravenclaw} onClick={this.handleChange} name="ravenclaw" type="checkbox" />Curious<br />
                 </label>
                 <br />
-                <label for="q-two">
-                    Which person do you admire most?
-                    <select>
-                        <option>Severus Snape</option>
-                        <option>Albus Dumbledore</option>
-                        <option>Luna Lovegood</option>
-                        <option>Nymphadora Tonks</option>
-                    </select>
+                <label>
+                    Which person do you admire most?<br />
+                        <input value={this.state.slytherin} onClick={this.handleChange} name="slytherin" type="checkbox" />Severus Snape<br />
+                        <input value={this.state.hufflepuff} onClick={this.handleChange} name="hufflepuff" type="checkbox" />Nymphadora Tonks<br />
+                        <input value={this.state.gryffindor} onClick={this.handleChange} name="gryffindor" type="checkbox" />Albus Dumbledore<br />
+                        <input value={this.state.ravenclaw} onClick={this.handleChange} name="ravenclaw" type="checkbox" />Luna Lovegood<br />
                 </label>
                 <br />
-                <label for="q-three">
-                    Which color do you like best?
-                    <select>
-                        <option>Red</option>
-                        <option>Green</option>
-                        <option>Blue</option>
-                        <option>Yellow</option>
-                    </select>
+                <label>
+                    Which color do you like best?<br />
+                        <input value={this.state.slytherin} onClick={this.handleChange} name="slytherin" type="checkbox" />Green<br />
+                        <input value={this.state.hufflepuff} onClick={this.handleChange} name="hufflepuff" type="checkbox" />Yellow<br />
+                        <input value={this.state.gryffindor} onClick={this.handleChange} name="gryffindor" type="checkbox" />Red<br />
+                        <input value={this.state.ravenclaw} onClick={this.handleChange} name="ravenclaw" type="checkbox" />Blue<br />
                 </label>
                 <br />
-                <label for="q-four">
-                    Your goal in life is to:
-                    <select>
-                        <option>Make morally right choices</option>
-                        <option>Be good to everyone</option>
-                        <option>Learn everything you possibly can</option>
-                        <option>Be the best</option>
-                    </select>
+                <label>
+                    Your goal in life is to:<br />
+                        <input value={this.state.slytherin} onClick={this.handleChange} name="slytherin" type="checkbox" />Be the best<br />
+                        <input value={this.state.hufflepuff} onClick={this.handleChange} name="hufflepuff" type="checkbox" />Be good to everyone<br />
+                        <input value={this.state.gryffindor} onClick={this.handleChange} name="gryffindor" type="checkbox" />Make morally right choices<br />
+                        <input value={this.state.ravenclaw} onClick={this.handleChange} name="ravenclaw" type="checkbox" />Learn everything you possibly can<br />
                 </label>
                 <br />
-                <label for="q-five">
-                    What animal do you like best?
-                    <select>
-                        <option>Badger</option>
-                        <option>Raven</option>
-                        <option>Lion</option>
-                        <option>Snake</option>
-                    </select>
+                <label>
+                    What animal do you like best?<br />
+                        <input value={this.state.slytherin} onClick={this.handleChange} name="slytherin" type="checkbox" />Snake<br />
+                        <input value={this.state.hufflepuff} onClick={this.handleChange} name="hufflepuff" type="checkbox" />Badger<br />
+                        <input value={this.state.gryffindor} onClick={this.handleChange} name="gryffindor" type="checkbox" />Lion<br />
+                        <input value={this.state.ravenclaw} onClick={this.handleChange} name="ravenclaw" type="checkbox" />Raven<br />
                 </label>
                 <br />
-                <label for="q-six">
-                    If you found $50 on the ground, you would:
-                    <select>
-                        <option>Give it to lost and found</option>
-                        <option>Give it to someone in need</option>
-                        <option>Use it to buy books</option>
-                        <option>Spend it for fun</option>
-                    </select>
+                <label>
+                    If you found $50 on the ground, you would:<br />
+                        <input value={this.state.slytherin} onClick={this.handleChange} name="slytherin" type="checkbox" />Spend it for fun<br />
+                        <input value={this.state.hufflepuff} onClick={this.handleChange} name="hufflepuff" type="checkbox" />Give it to someone in need<br />
+                        <input value={this.state.gryffindor} onClick={this.handleChange} name="gryffindor" type="checkbox" />Give it to lost and found<br />
+                        <input value={this.state.ravenclaw} onClick={this.handleChange} name="ravenclaw" type="checkbox" />Use it to buy books<br />
                 </label>
                 <br />
-                <button type="submit"> Submit</button>
+                <button type="submit">Submit</button>
             </form>
         )
     }
