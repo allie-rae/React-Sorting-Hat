@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SortQuiz from './components/SortQuiz'
+import Routes from './routes/Routes'
 import './App.css';
 
 class App extends Component {
@@ -7,8 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         Welcome to the Hogwarts Sorting Ceremony! <br />
-        <SortQuiz />
-        <button>Get Sorted</button>
+        <Routes />
       </div>
     );
   }
