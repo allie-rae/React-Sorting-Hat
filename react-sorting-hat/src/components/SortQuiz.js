@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
 class SortQuiz extends Component {
     constructor() {
@@ -12,11 +11,9 @@ class SortQuiz extends Component {
         }
 
         this.handleChange = (e) => {
-            console.log(e.target.name)
                 this.setState({
                     [e.target.className]: parseInt(e.target.value, 10) + 1
                 })
-            console.log(this.state)
         }
 
         this.onSubmit = (e) => {
@@ -37,40 +34,40 @@ class SortQuiz extends Component {
         return (
             <form onSubmit={this.onSubmit}>
                 Which of these words best describes you? <br />
-                        <input value={this.state.slytherin} onClick={this.handleChange} className="slytherin" name="q1" type="radio" />Ambitious<br />
-                        <input value={this.state.hufflepuff} onClick={this.handleChange} className="hufflepuff" name="q1" type="radio" />Kind<br />
-                        <input value={this.state.gryffindor} onClick={this.handleChange} className="gryffindor" name="q1" type="radio" />Brave<br />
-                        <input value={this.state.ravenclaw} onClick={this.handleChange} className="ravenclaw" name="q1" type="radio" />Curious<br />
+                        <input value={this.state.slytherin} onSubmit={this.handleChange} className="slytherin" name="q1" type="radio" />Ambitious<br />
+                        <input value={this.state.hufflepuff} onSubmit={this.handleChange} className="hufflepuff" name="q1" type="radio" />Kind<br />
+                        <input value={this.state.gryffindor} onSubmit={this.handleChange} className="gryffindor" name="q1" type="radio" />Brave<br />
+                        <input value={this.state.ravenclaw} onSubmit={this.handleChange} className="ravenclaw" name="q1" type="radio" />Curious<br />
                 <br />
                     Which person do you admire most?<br />
-                        <input value={this.state.slytherin} onClick={this.handleChange} className="slytherin" name="q2" type="radio" />Severus Snape<br />
-                        <input value={this.state.hufflepuff} onClick={this.handleChange} className="hufflepuff" name="q2" type="radio" />Nymphadora Tonks<br />
-                        <input value={this.state.gryffindor} onClick={this.handleChange} className="gryffindor" name="q2" type="radio" />Albus Dumbledore<br />
-                        <input value={this.state.ravenclaw} onClick={this.handleChange} className="ravenclaw" name="q2" type="radio" />Luna Lovegood<br />
+                        <input value={this.state.slytherin} onSubmit={this.handleChange} className="slytherin" name="q2" type="radio" />Severus Snape<br />
+                        <input value={this.state.hufflepuff} onSubmit={this.handleChange} className="hufflepuff" name="q2" type="radio" />Nymphadora Tonks<br />
+                        <input value={this.state.gryffindor} onSubmit={this.handleChange} className="gryffindor" name="q2" type="radio" />Albus Dumbledore<br />
+                        <input value={this.state.ravenclaw} onSubmit={this.handleChange} className="ravenclaw" name="q2" type="radio" />Luna Lovegood<br />
                 <br />
                     Which color do you like best?<br />
-                        <input value={this.state.slytherin} onClick={this.handleChange} className="slytherin" name="q3" type="radio" />Green<br />
-                        <input value={this.state.hufflepuff} onClick={this.handleChange} className="hufflepuff" name="q3" type="radio" />Yellow<br />
-                        <input value={this.state.gryffindor} onClick={this.handleChange} className="gryffindor" name="q3" type="radio" />Red<br />
-                        <input value={this.state.ravenclaw} onClick={this.handleChange} className="ravenclaw" name="q3" type="radio" />Blue<br />
+                        <input value={this.state.slytherin} onSubmit={this.handleChange} className="slytherin" name="q3" type="radio" />Green<br />
+                        <input value={this.state.hufflepuff} onSubmit={this.handleChange} className="hufflepuff" name="q3" type="radio" />Yellow<br />
+                        <input value={this.state.gryffindor} onSubmit={this.handleChange} className="gryffindor" name="q3" type="radio" />Red<br />
+                        <input value={this.state.ravenclaw} onSubmit={this.handleChange} className="ravenclaw" name="q3" type="radio" />Blue<br />
                 <br />
                     Your goal in life is to:<br />
-                        <input value={this.state.slytherin} onClick={this.handleChange} className="slytherin" name="q4" type="radio" />Be the best<br />
-                        <input value={this.state.hufflepuff} onClick={this.handleChange} className="hufflepuff" name="q4" type="radio" />Be good to everyone<br />
-                        <input value={this.state.gryffindor} onClick={this.handleChange} className="gryffindor" name="q4" type="radio" />Make morally right choices<br />
-                        <input value={this.state.ravenclaw} onClick={this.handleChange} className="ravenclaw" name="q4" type="radio" />Learn everything you possibly can<br />
+                        <input value={this.state.slytherin} onSubmit={this.handleChange} className="slytherin" name="q4" type="radio" />Be the best<br />
+                        <input value={this.state.hufflepuff} onSubmit={this.handleChange} className="hufflepuff" name="q4" type="radio" />Be good to everyone<br />
+                        <input value={this.state.gryffindor} onSubmit={this.handleChange} className="gryffindor" name="q4" type="radio" />Make morally right choices<br />
+                        <input value={this.state.ravenclaw} onSubmit={this.handleChange} className="ravenclaw" name="q4" type="radio" />Learn everything you possibly can<br />
                 <br />
                     What animal do you like best?<br />
-                        <input value={this.state.slytherin} onClick={this.handleChange} className="slytherin" name="q5" type="radio" />Snake<br />
-                        <input value={this.state.hufflepuff} onClick={this.handleChange} className="hufflepuff" name="q5" type="radio" />Badger<br />
-                        <input value={this.state.gryffindor} onClick={this.handleChange} className="gryffindor" name="q5" type="radio" />Lion<br />
-                        <input value={this.state.ravenclaw} onClick={this.handleChange} className="ravenclaw" name="q5" type="radio" />Raven<br />
+                        <input value={this.state.slytherin} onSubmit={this.handleChange} className="slytherin" name="q5" type="radio" />Snake<br />
+                        <input value={this.state.hufflepuff} onSubmit={this.handleChange} className="hufflepuff" name="q5" type="radio" />Badger<br />
+                        <input value={this.state.gryffindor} onSubmit={this.handleChange} className="gryffindor" name="q5" type="radio" />Lion<br />
+                        <input value={this.state.ravenclaw} onSubmit={this.handleChange} className="ravenclaw" name="q5" type="radio" />Raven<br />
                 <br />
                     If you found $50 on the ground, you would:<br />
-                        <input value={this.state.slytherin} onClick={this.handleChange} className="slytherin" name="q6" type="radio" />Spend it for fun<br />
-                        <input value={this.state.hufflepuff} onClick={this.handleChange} className="hufflepuff" name="q6" type="radio" />Give it to someone in need<br />
-                        <input value={this.state.gryffindor} onClick={this.handleChange} className="gryffindor" name="q6" type="radio" />Give it to lost and found<br />
-                        <input value={this.state.ravenclaw} onClick={this.handleChange} className="ravenclaw" name="q6" type="radio" />Use it to buy books<br />
+                        <input value={this.state.slytherin} onSubmit={this.handleChange} className="slytherin" name="q6" type="radio" />Spend it for fun<br />
+                        <input value={this.state.hufflepuff} onSubmit={this.handleChange} className="hufflepuff" name="q6" type="radio" />Give it to someone in need<br />
+                        <input value={this.state.gryffindor} onSubmit={this.handleChange} className="gryffindor" name="q6" type="radio" />Give it to lost and found<br />
+                        <input value={this.state.ravenclaw} onSubmit={this.handleChange} className="ravenclaw" name="q6" type="radio" />Use it to buy books<br />
                 <br />
                 <button type="submit">Submit</button>
             </form>
