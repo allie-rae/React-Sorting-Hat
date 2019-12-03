@@ -33,7 +33,6 @@ class SortQuiz extends Component {
         }
     }
 
-
     render() {
         return (
             <form onSubmit={this.onSubmit}>
